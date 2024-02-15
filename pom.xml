@@ -164,16 +164,11 @@
                 <version>1.7.36</version>
             </dependency>
             <!-- Used by ODFDOM, i.e. org/odftoolkit/odfdom/IElementWriter.java -->
+            <!-- Replacing xalan with fork to avoid document maformation when unicode emojis used in content https://github.com/tdf/odftoolkit/issues/137 -->
             <dependency>
-                <groupId>xalan</groupId>
-                <artifactId>serializer</artifactId>
-                <exclusions>
-                    <exclusion>
-                        <groupId>xml-apis</groupId>
-                        <artifactId>xml-apis</artifactId>
-                    </exclusion>
-                </exclusions>
-                <version>2.7.3</version>
+                <groupId>org.docx4j.org.apache</groupId>
+                <artifactId>xalan-serializer</artifactId>
+                <version>11.0.0</version>
             </dependency>
             <!-- used by generator, validator and odfdom module -->
             <dependency>
